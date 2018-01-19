@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Web</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-controller="StoreController as store">
+            <input type="text" ng-model="store.content" />
+            <div>Text Content: {{store.content}}</div>
+        <table class="table" width="100%">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>PhoneNo</th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr ng-repeat="contact in store.contacts">
+                <td>{{contact.firstName}}</td>
+                <td>{{contact.lastName}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.phone}}</td>
+                <td>
+                    <button class="btn btn-sm btn-warning">Edit</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
