@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Web</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-controller="StoreController as store">
+        <div class="row">
+            <div class="col-3">Firstname</div>
+            <div class="col-6">
+                <input type="text" class="form-control" ng-model="store.contact.firstName" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">Lastname</div>
+            <div class="col-6">
+                <input type="text" class="form-control" ng-model="store.contact.lastName" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">Email ID</div>
+            <div class="col-6">
+                <input type="text" class="form-control" ng-model="store.contact.email" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">Phone No.</div>
+            <div class="col-6">
+                <input type="text" class="form-control" ng-model="store.contact.phone" />
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-3">Gender</div>
+                <div class="col-6">
+                    <label><input type="radio" ng-model="store.contact.gender" value="Male" />Male</label>
+                    <label><input type="radio" ng-model="store.contact.gender" value="Female" />Female</label>
+                </div>
+            </div>
+        <div class="row">
+                <div class="col-3">&nbsp;</div>
+                <div class="col-6">
+                    <button ng-click="store.showContact()" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-3">Firstname</div>
+            <div class="col-6">{{store.contact.firstName}}</div>
+        </div>
+        <div class="row">
+            <div class="col-3">Lastname</div>
+            <div class="col-6">{{store.contact.lastName}}</div>
+        </div>
+        <div class="row">
+            <div class="col-3">Email ID</div>
+            <div class="col-6">{{store.contact.email}}</div>
+        </div>
+        <div class="row">
+            <div class="col-3">Phone No.</div>
+            <div class="col-6">{{store.contact.phone}}</div>
+        </div>
+        <div class="row">
+                <div class="col-3">Gender</div>
+                <div class="col-6">{{store.contact.gender}}</div>
+            </div>
+    </div>
+
+</body>
+
+</html>
